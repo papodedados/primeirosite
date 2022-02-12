@@ -22,9 +22,7 @@ class MyAccountManager(BaseUserManager):
         user.set_password(password)
         user.save(using=self._db)
         return user
-
-
-
+ 
     def create_superuser(self, first_name, last_name, email, username, password):
         user = self.create_user(
             email = self.normalize_email(email),
@@ -39,8 +37,7 @@ class MyAccountManager(BaseUserManager):
         user.is_superadmin = True
         user.save(using=self._db)
         return user
-
-
+ 
 class Account(AbstractBaseUser):
     first_name      = models.CharField(max_length=50)
     last_name       = models.CharField(max_length=50)
