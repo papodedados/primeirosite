@@ -10,7 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-from pathlib import Path
+from pathlib import Path 
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -31,17 +32,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts.apps.AccountsConfig',
-    'category.apps.CategoryConfig',
-    'store.apps.StoreConfig',
-    'carts.apps.CartsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',   
-
+    'accounts.apps.AccountsConfig',
+    'category.apps.CategoryConfig',
+    'store.apps.StoreConfig',
+    'carts.apps.CartsConfig', 
 ]
 
 MIDDLEWARE = [
@@ -140,3 +140,10 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# SMTP configuration
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'leo_cesar18@hotmail.com'
+EMAIL_HOST_PASSWORD = 'leo101811'
+EMAIL_USE_TLS = True
