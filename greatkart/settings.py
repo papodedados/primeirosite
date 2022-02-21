@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path 
 import os
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -144,6 +145,6 @@ MESSAGE_TAGS = {
 # SMTP configuration
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'leo_cesar18@hotmail.com'
-EMAIL_HOST_PASSWORD = 'leo101811'
+EMAIL_HOST_USER = 'papodedados@gmail.com'
+EMAIL_HOST_PASSWORD = 'leonardo109793'
 EMAIL_USE_TLS = True
