@@ -9,6 +9,8 @@ from django.http import HttpResponse
 from django.db.models import Q 
 
 
+def payments(request):
+    return render(request,'orders/payments.html')
 
 # Create your views here.
 
