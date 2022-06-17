@@ -71,6 +71,7 @@ class Account(AbstractBaseUser):
         return True
 
 
+
 class UserProfile(models.Model):
     user = models.OneToOneField(Account, on_delete=models.CASCADE)
     address_line_1 = models.CharField(blank=True, max_length=100)
@@ -85,3 +86,5 @@ class UserProfile(models.Model):
 
     def full_address(self):
         return f'{self.address_line_1} {self.address_line_2}'
+
+ 
